@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🌍 Travel Explorer</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Next Adventure</h2>
+            <p>Explore destinations, view stunning photos, and check real-time weather</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a destination (e.g., Paris, Tokyo, New York)">
+                <button id="searchBtn">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Info Section -->
+    <section id="destinations" class="destination-info">
+        <div class="container">
+            <div id="destinationContent" class="destination-content hidden">
+                <!-- Weather Card -->
+                <div class="weather-card">
+                    <h3>Current Weather</h3>
+                    <div id="weatherInfo">
+                        <div class="weather-icon" id="weatherIcon"></div>
+                        <div class="weather-details">
+                            <p class="temperature" id="temperature">--°C</p>
+                            <p class="description" id="weatherDescription">--</p>
+                            <div class="weather-extra">
+                                <span id="humidity">Humidity: --%</span>
+                                <span id="windSpeed">Wind: -- km/h</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="location-name" id="locationName">--</p>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="photo-gallery">
+                    <h3>Destination Photos</h3>
+                    <div id="photoGrid" class="photo-grid">
+                        <!-- Photos will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Loading destination info...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden">
+                <p>Unable to find destination. Please try another location.</p>
+            </div>
+
+            <!-- Initial Message -->
+            <div id="initialMessage" class="initial-message">
+                <h3>Start Exploring</h3>
+                <p>Enter a destination above to view photos and weather information</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section class="popular-destinations">
+        <div class="container">
+            <h3>Popular Destinations</h3>
+            <div class="destination-chips">
+                <button class="chip" data-location="Paris">Paris</button>
+                <button class="chip" data-location="Tokyo">Tokyo</button>
+                <button class="chip" data-location="New York">New York</button>
+                <button class="chip" data-location="London">London</button>
+                <button class="chip" data-location="Dubai">Dubai</button>
+                <button class="chip" data-location="Bali">Bali</button>
+                <button class="chip" data-location="Rome">Rome</button>
+                <button class="chip" data-location="Barcelona">Barcelona</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h3>About Travel Explorer</h3>
+            <p>Travel Explorer simplifies trip planning by providing instant access to destination photos and real-time weather information. Our clean interface helps you discover and explore destinations effortlessly.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Travel Explorer. Made with ❤️ for travelers.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
